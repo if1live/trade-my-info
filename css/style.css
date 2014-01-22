@@ -63,3 +63,15 @@ body {
   }
 
 }
+
+/* Custom CSS */
+
+.info-header {
+  background-image: url('../img/shop.jpg');
+  background-size: 100%;
+}
+
+.info-header-content {
+  background: rgba(50, 50, 50, 0.6);
+  color: white;
+}
