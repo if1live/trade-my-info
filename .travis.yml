@@ -8,14 +8,10 @@ env:
     secure: "SoblquraEM810pj7my9O6eANDYZnbQrxNmvVrhiO4JjU+PLXdohcP+7MY9dYqbeqTVg4E4aYNFkbX/Ml7SCnuv55p4ZovNfNobfIZXwyhnMCphBIQPYcD/cV8Y3jelO5vdQifBzFZMtxCkwkriZviDuA0u/Pae+WI/5Fqu1n8Nc="
   
 before_script:
-  - npm install -g grunt-cli
-  - npm install -g bower
-  - npm install grunt
-  - npm install bower
+  - npm install
 
 script:
-  - grunt mochaTest
-  - grunt assemble
+  - grunt
 
 after_success :
   - git config --global user.email "libsora25@gmail.com"

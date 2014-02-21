@@ -40,6 +40,8 @@
     "grunt-contrib-clean": "~0.4.1",
     "grunt-mocha-test": "~0.9.0",
     "grunt-coveralls": "~0.3.0",
+    "grunt-cli": "~0.1.13",
+	"bower": "~v1.2.8",
     "jscoverage": "~0.3.8",
     "coveralls": "~2.8.0",
     "mocha-lcov-reporter": "~0.0.1"
