@@ -29,7 +29,7 @@ after_success :
   - cd trade-my-info
   - git add -f .
   - git commit -a -m "add new site content" --allow-empty
-  - git push https://${GH_TOKEN}@github.com/if1live/trade-my-info.git trade-my-info --quiet
+  - git push https://${GH_TOKEN}@github.com/if1live/trade-my-info.git gh-pages --quiet
   
 notifications:
   email: false
