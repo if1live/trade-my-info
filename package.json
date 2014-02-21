@@ -1,32 +1,32 @@
 {
-  "name": "assemble-examples-markdown",
-  "description": "Use Assemble to generate HTML pages from markdown content. Useful for wikis, gh-pages, documentation and blogs or sites with markdown posts.",
-  "version": "0.1.0",
-  "homepage": "https://github.com/assemble/assemble-examples-markdown/",
+  "name": "trade-my-info",
+  "description": "No.1 온라인 개인정보거래소",
+  "version": "0.0.1",
+  "homepage": "http://trademyinfo.libsora.so/",
   "author": {
-    "name": "Assemble"
+    "name": "if1live"
   },
   "contributors": [
     {
-      "name": "Jon Schlinkert",
-      "url": "https://github.com/jonschlinkert"
+      "name": "if1live",
+      "url": "https://github.com/if1live"
     },
     {
-      "name": "Brian Woodward",
-      "url": "https://github.com/doowb"
+      "name": "FeGs",
+      "url": "https://github.com/FeGs"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/assemble/assemble-examples-markdown.git"
+    "url": "https://github.com/if1live/trade-my-info.git"
   },
   "bugs": {
-    "url": "https://github.com/assemble/assemble-examples-markdown/issues"
+    "url": "https://github.com/if1live/trade-my-info/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/assemble/assemble-examples-markdown/blob/master/LICENSE-MIT"
+      "url": "https://github.com/if1live/trade-my-info/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",
@@ -47,17 +47,8 @@
     "mocha-lcov-reporter": "~0.0.1"
   },
   "keywords": [
-    "markdown",
-    "markdown to html",
-    "jekyll alternative",
-    "jekyll node.js",
-    "content",
-    "assemble",
-    "build",
     "site generator",
-    "component generator",
-    "blog generator",
-    "handlebars",
-    "templates"
+    "trade my info",
+    "카드사 개인정보 유출사건"
   ]
 }
