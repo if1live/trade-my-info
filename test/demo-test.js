@@ -1,4 +1,8 @@
-var assert = require("assert");
+if(typeof window === 'undefined') {
+  assert = require('assert');
+  base = require('../src/base.js');
+}
+
 describe('Array', function() {
   describe('#indexOf()', function() {
     it('should return -1 when the value is not present', function() {

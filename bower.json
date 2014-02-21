@@ -4,6 +4,8 @@
     "bootstrap": "~v3.1.1",
     "jquery": "~1.11.0",
     "html5shiv": "~3.7.0",
-    "respond": "~1.4.2"
+    "respond": "~1.4.2",
+    "mocha": "~1.17.1",
+    "assert": "~0.0.2"
   }
 }
