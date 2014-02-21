@@ -1,0 +1,60 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+  padding-top: 40px;
+}
+/* MARKETING CONTENT
+-------------------------------------------------- */
+/* Pad the edges of the mobile views a bit */
+.marketing {
+  padding-left: 15px;
+  padding-right: 15px;
+  /* Center align the text within the three columns below the carousel */
+}
+.marketing .col-lg-4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.marketing .col-lg-4 p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+/* Featurettes
+------------------------- */
+.featurette-divider {
+  margin: 80px 0;
+  /* Space out the Bootstrap <hr> more */
+}
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (min-width: 768px) {
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+/* Custom CSS */
+.info-header {
+  background-image: url('../img/shop.jpg');
+  background-size: 100%;
+}
+.info-header-content {
+  background: rgba(50, 50, 50, 0.6);
+  color: white;
+}
