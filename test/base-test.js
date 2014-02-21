@@ -3,7 +3,7 @@
 
 if(typeof window === 'undefined') {
   assert = require('assert');
-  base = require('../src/base.js');
+  base = process.env.LIB_COV ? require('../lib-cov/base.js') : require('../lib/base.js');
 }
 describe('base', function() {
   describe('#int2krw', function() {

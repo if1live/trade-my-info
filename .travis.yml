@@ -14,6 +14,7 @@ script:
   - grunt
 
 after_success :
+  - make coveralls
   - git config --global user.email "libsora25@gmail.com"
   - git config --global user.name "Travis"
   - bower install
