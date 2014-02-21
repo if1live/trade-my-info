@@ -9,6 +9,9 @@
 
 module.exports = function(grunt) {
 
+  // Add the grunt-mocha-test tasks.
+  grunt.loadNpmTasks('grunt-mocha-test');
+  
   // Project configuration.
   grunt.initConfig({
 
@@ -49,6 +52,15 @@ module.exports = function(grunt) {
         }
       }
     },
+    // Configure a mochaTest task
+    mochaTest: {
+      test: {
+        options: {
+          reporter: 'spec'
+        },
+        src: ['test/**/*.js']
+      }
+    },
 
     // Before generating any new files,
     // remove any previously-created files.
@@ -62,6 +74,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Default tasks to be run.
-  grunt.registerTask('default', ['assemble']);
+  grunt.registerTask('default', ['assemble', 'mochaTest']);
 };
 
