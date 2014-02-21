@@ -9,8 +9,8 @@
 
 module.exports = function(grunt) {
 
-  // Add the grunt-mocha-test tasks.
   grunt.loadNpmTasks('grunt-mocha-test');
+  grunt.loadNpmTasks('grunt-coveralls');
   
   // Project configuration.
   grunt.initConfig({
@@ -30,28 +30,15 @@ module.exports = function(grunt) {
         files: {
           'dest/': ['src/templates/pages/*.hbs']
         }
-      },
-      html2: {
-        options: {
-          ext: '.html',
-          engine: 'handlebars',
-          layout: 'markdown-2.hbs'
-        },
-        files: {
-          'dest/': ['src/content/*.md']
-        }
-      },
-      markdown: {
-        options: {
-          ext: '.md',
-          engine: 'handlebars',
-          layout: 'markdown-1.hbs'
-        },
-        files: {
-          'dest/': ['src/content/*.md']
-        }
       }
     },
+    
+    // Before generating any new files,
+    // remove any previously-created files.
+    clean: {
+      example: ['dest/*.{html,md}']
+    },
+    
     // Configure a mochaTest task
     mochaTest: {
       test: {
@@ -61,12 +48,22 @@ module.exports = function(grunt) {
         src: ['test/**/*.js']
       }
     },
+    
+    coveralls: {
+      options: {
+        // LCOV coverage file relevant to every target
+        src: 'coverage-results/lcov.info',
 
-    // Before generating any new files,
-    // remove any previously-created files.
-    clean: {
-      example: ['dest/*.{html,md}']
-    }
+        // When true, grunt-coveralls will only print a warning rather than
+        // an error, to prevent CI builds from failing unnecessarily (e.g. if
+        // coveralls.io is down). Optional, defaults to false.
+        force: false
+      },
+      your_target: {
+        // Target-specific LCOV coverage file
+        src: 'coverage-results/extra-results-*.info'
+      },
+    },
   });
 
   // Load npm plugins to provide necessary tasks.
