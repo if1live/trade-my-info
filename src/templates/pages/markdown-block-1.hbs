@@ -1,32 +1,16 @@
-# Markdown Boilerplate
+---
+title: Inline Markdown
+section: Markdown Helpers
+description: In this example markdown content from the README is written in between the open and close "markdown" block expressions so that it will be rendered to HTML. Handlebars templates are also embedded in the markdown for rendering the metadata from our YAML front matter.
+---
 
-> Use Assemble to generate HTML pages from markdown content. Useful for wikis, gh-pages, documentation and blogs or sites with markdown posts.
+{{#markdown}}
 
-#### Thank you to [Upstage](https://github.com/upstage) for the theme used in the [live demo](http://assemble.github.io/boilerplate-markdown) (the same used on http://assemble.io)!
+# {{title}} 
 
-This is not intended to be "documentation" for Assemble, the content used in this project is for example purposes. So you will learn by browsing the source code, rendered code, and seeing how it renders in the browser.
+> {{{description}}}
 
-## Related information
-
-* [grunt-init-assemble](https://github.com/assemble/grunt-init-assemble): use [grunt-init](http://gruntjs.com/project-scaffolding) to launch new Assemble projects in seconds.
-* [Assemble's documentation](http://assemble.io): if you want to learn more about Assemble in general, this is a great place to start.
-* [assemble-boilerplate](https://github.com/assemble/assemble-boilerplate): see more examples.
-
-
-## What you'll see in the examples
-
-* How to use [file globbing](https://github.com/isaacs/node-glob) to include multiple markdown files based on specified patterns.
-
-### Rendering markdown to markdown
-
-* How to generate markdown files from markdown pages. See [../src/content/TOC.md](../src/content/TOC.md)
-* How to use markdown "includes" that either render to HTML or render as markdown
-* How to use markdown layouts for generating markdown files
-
-### Rendering markdown to HTML
-
-* How to write markdown "inline" with HTML and have it render to HTML
-* How to generate HTML files from markdown pages, layouts and content.
+The markdown used in this example was borrowed from Assemble's wiki. Expect to find broken links since the "complete build" for the wiki includes components that are not present in this repo.
 
 
 ## Getting started
@@ -71,7 +55,7 @@ Task targets, files and options may be specified according to the grunt [Configu
 
 You should now be able to run `grunt assemble` to build the project.
 
-Visit [Assemble's documentation](http://assemble.io) for more information.
+Visit [Assemble's documentation](http://assemble.io) for more information. 
 
 
 ## Contributing
@@ -79,3 +63,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 _(Nothing yet)_
+
+{{/markdown}}
