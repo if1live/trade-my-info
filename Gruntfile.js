@@ -74,6 +74,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Default tasks to be run.
-  grunt.registerTask('default', ['assemble', 'mochaTest']);
+  grunt.registerTask('default', ['mochaTest', 'assemble']);
 };
 
