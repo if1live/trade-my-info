@@ -10,3 +10,5 @@ TODO.md
 
 dest/*.md
 dest/*.html
+
+bower_components

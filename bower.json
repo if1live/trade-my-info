@@ -1,8 +1,9 @@
 {
-  "name": "assemble-examples-markdown",
+  "name": "trade-my-info",
   "dependencies": {
-    "grunt-contrib-clean": "~0.4.1",
-    "assemble": "~0.4.0",
-    "grunt": "~0.4.1"
+    "bootstrap": "~v3.1.1",
+    "jquery": "~1.11.0",
+    "html5shiv": "~3.7.0",
+    "respond": "~1.4.2"
   }
 }
