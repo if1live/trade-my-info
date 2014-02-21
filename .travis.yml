@@ -2,6 +2,10 @@ language: node_js
 
 node_js:
   - "0.10"
+
+env:
+  global:
+    secure: "SoblquraEM810pj7my9O6eANDYZnbQrxNmvVrhiO4JjU+PLXdohcP+7MY9dYqbeqTVg4E4aYNFkbX/Ml7SCnuv55p4ZovNfNobfIZXwyhnMCphBIQPYcD/cV8Y3jelO5vdQifBzFZMtxCkwkriZviDuA0u/Pae+WI/5Fqu1n8Nc="
   
 before_script:
   - npm install -g grunt-cli
@@ -14,4 +18,18 @@ script:
   - grunt assemble
 
 after_success :
+  - git config --global user.email "libsora25@gmail.com"
+  - git config --global user.name "Travis"
   - bower install
+  - git clone -b gh-pages --depth 1 https://github.com/if1live/trade-my-info.git
+  - cp CNAME trade-my-info
+  - cp .gitignore trade-my-info
+  - cp .gitattributes trade-my-info
+  - cp -r dest/* trade-my-info
+  - cd trade-my-info
+  - git add -f .
+  - git commit -a -m "add new site content" --allow-empty
+  - git push https://${GH_TOKEN}@github.com/if1live/trade-my-info.git trade-my-info --quiet
+  
+notifications:
+  email: false
