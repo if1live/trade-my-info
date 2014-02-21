@@ -8,10 +8,6 @@
 'use strict';
 
 module.exports = function(grunt) {
-
-  grunt.loadNpmTasks('grunt-mocha-test');
-  grunt.loadNpmTasks('grunt-coveralls');
-  
   // Project configuration.
   grunt.initConfig({
 
@@ -32,13 +28,13 @@ module.exports = function(grunt) {
         }
       }
     },
-    
+
     // Before generating any new files,
     // remove any previously-created files.
     clean: {
       example: ['dest/*.{html,md}']
     },
-    
+
     // Configure a mochaTest task
     mochaTest: {
       test: {
@@ -48,7 +44,7 @@ module.exports = function(grunt) {
         src: ['test/**/*.js']
       }
     },
-    
+
     coveralls: {
       options: {
         // LCOV coverage file relevant to every target
@@ -64,13 +60,36 @@ module.exports = function(grunt) {
         src: 'coverage-results/extra-results-*.info'
       },
     },
+    less: {
+      development: {
+        options: {
+          paths: ["assets/gen"]
+        },
+        files: {
+          "dest/assets/gen/style.css": "src/less/style.less"
+        }
+      }
+	  /*
+      production: {
+        options: {
+          paths: ["assets/gen"],
+          compress: true
+        },
+        files: {
+          "dest/assets/gen/style.css": "src/less/style.less"
+        }
+      }
+	  */
+    }
   });
 
   // Load npm plugins to provide necessary tasks.
   grunt.loadNpmTasks('assemble');
+  grunt.loadNpmTasks('assemble-less');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-mocha-test');
+  grunt.loadNpmTasks('grunt-coveralls');
 
   // Default tasks to be run.
-  grunt.registerTask('default', ['mochaTest', 'assemble']);
+  grunt.registerTask('default', ['mochaTest', 'less', 'assemble']);
 };
-

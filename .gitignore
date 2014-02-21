@@ -27,6 +27,7 @@ TODO.md
 
 dest/*.md
 dest/*.html
+dest/assets/gen
 
 bower_components
 trade-my-info

@@ -23,7 +23,6 @@ after_success :
   - bower install
   - git clone -b gh-pages --depth 1 https://github.com/if1live/trade-my-info.git
   - cp CNAME trade-my-info
-  - cp .gitignore trade-my-info
   - cp .gitattributes trade-my-info
   - cp -r dest/* trade-my-info
   - cd trade-my-info
