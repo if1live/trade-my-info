@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/if1live/trade-my-info.png?label=ready)](https://waffle.io/if1live/trade-my-info)
 # trade my info
 
 No.1 온라인 개인정보거래소 
