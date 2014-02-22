@@ -17,4 +17,15 @@ describe('base', function() {
       assert.equal(base.int2krw(1234567), "1,234,567");
     })
   })
+
+  describe('#zeroFill', function() {
+    it('run', function() {
+      assert.equal(base.zeroFill(1, 1), '1');
+      assert.equal(base.zeroFill(1, 2), '01');
+      assert.equal(base.zeroFill(1, 3), '001');
+
+      assert.equal(base.zeroFill(123, 1), '123');
+      assert.equal(base.zeroFill(123, 5), '00123');
+    })
+  })
 })
