@@ -6,7 +6,7 @@ node_js:
 env:
   global:
     secure: "SoblquraEM810pj7my9O6eANDYZnbQrxNmvVrhiO4JjU+PLXdohcP+7MY9dYqbeqTVg4E4aYNFkbX/Ml7SCnuv55p4ZovNfNobfIZXwyhnMCphBIQPYcD/cV8Y3jelO5vdQifBzFZMtxCkwkriZviDuA0u/Pae+WI/5Fqu1n8Nc="
-  
+
 before_script:
   - npm install
 
@@ -26,6 +26,6 @@ after_success :
   - git add -f .
   - git commit -a -m "add new site content" --allow-empty
   - git push https://${GH_TOKEN}@github.com/if1live/trade-my-info.git gh-pages --quiet
-  
+
 notifications:
   email: false
